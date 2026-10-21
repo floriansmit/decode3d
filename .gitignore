@@ -9,6 +9,7 @@ __pycache__/
 artifacts/
 decode-site-v*.tar.gz
 .sites-web-git/
+apps/web/.sites/
 
 # Source cultural workbooks may carry separate redistribution terms.
 data/cultural/raw/
