@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "decode-3d"
+version = "0.1.0"
+description = "Regional geological-model ingestion and geothermal assessment workflows for DECODE"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "xarray>=2024.9,<2024.10",
+  "scipy>=1.14",
+  "rasterio>=1.4",
+  "pyproj>=3.7",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.116", "uvicorn>=0.35"]
+thermogis = ["pythermogis>=3.0", "jpype1>=1.6", "pygridsio>=0.1"]
+test = ["pytest>=8.3"]
+
+[project.scripts]
+decode-build-model = "decode3d.processing.first_pass:main"
+decode-run-pythermogis = "decode3d.calculations.pythermogis_adapter:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/decode3d"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

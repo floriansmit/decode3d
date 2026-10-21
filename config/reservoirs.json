@@ -1,0 +1,108 @@
+{
+  "contract_version": "0.1.0",
+  "crs": "EPSG:23032",
+  "grid_resolution_m": 500,
+  "temperature_model": {
+    "surface_temperature_c": 8.0,
+    "gradient_c_per_m": 0.027
+  },
+  "reservoirs": [
+    {
+      "id": "chalk_shallow",
+      "name": "Shallow Chalk / ATES",
+      "assessment_type": "ates",
+      "top_horizon": "Top B (Top Chalk Grp)",
+      "base_horizon": "Base B (Base Chalk Grp)",
+      "porosity": 0.32,
+      "ntg": 0.75,
+      "permeability_md": 15.0,
+      "ln_permeability_sd": 1.2,
+      "thickness_relative_sd": 0.25,
+      "valid_depth_min_m": 20,
+      "valid_depth_max_m": 700,
+      "minimum_thickness_m": 20,
+      "status": "screening_only"
+    },
+    {
+      "id": "frederikshavn",
+      "name": "Frederikshavn Formation",
+      "assessment_type": "deep_geothermal",
+      "top_horizon": "Top D1 (Top Frederikshavn Fm)",
+      "base_horizon": "Top D2 (Top Børglum Fm)",
+      "porosity": 0.22,
+      "ntg": 0.30,
+      "permeability_md": 220.0,
+      "ln_permeability_sd": 0.9,
+      "thickness_relative_sd": 0.20,
+      "valid_depth_min_m": 800,
+      "valid_depth_max_m": 3000,
+      "minimum_thickness_m": 10,
+      "status": "candidate"
+    },
+    {
+      "id": "haldager_sand",
+      "name": "Haldager Sand Formation",
+      "assessment_type": "deep_geothermal",
+      "top_horizon": "Top D3 (Top Haldager Fm)",
+      "base_horizon": "Top E1 (Top Fjerritslev Fm)",
+      "porosity": 0.20,
+      "ntg": 0.65,
+      "permeability_md": 300.0,
+      "ln_permeability_sd": 0.75,
+      "thickness_relative_sd": 0.20,
+      "valid_depth_min_m": 800,
+      "valid_depth_max_m": 3000,
+      "minimum_thickness_m": 5,
+      "status": "candidate"
+    },
+    {
+      "id": "gassum",
+      "name": "Gassum Formation",
+      "assessment_type": "deep_geothermal",
+      "top_horizon": "Top E2'  (Top Gassum Fm ~ TS9)",
+      "base_horizon": "Top F1' (Top Vinding Fm ~ SB5)",
+      "porosity": 0.19,
+      "ntg": 0.55,
+      "permeability_md": 350.0,
+      "ln_permeability_sd": 0.70,
+      "thickness_relative_sd": 0.18,
+      "valid_depth_min_m": 800,
+      "valid_depth_max_m": 3000,
+      "minimum_thickness_m": 10,
+      "status": "primary"
+    },
+    {
+      "id": "skagerrak",
+      "name": "Skagerrak Formation",
+      "assessment_type": "deep_geothermal",
+      "top_horizon": "Top F1'' (Top Skagerrak)",
+      "base_horizon": "Top F2 (Top Oddesund Fm)",
+      "porosity": 0.16,
+      "ntg": 0.45,
+      "permeability_md": 120.0,
+      "ln_permeability_sd": 1.0,
+      "thickness_relative_sd": 0.25,
+      "valid_depth_min_m": 800,
+      "valid_depth_max_m": 3000,
+      "minimum_thickness_m": 10,
+      "status": "candidate"
+    },
+    {
+      "id": "bunter_sandstone",
+      "name": "Bunter Sandstone Formation",
+      "assessment_type": "deep_geothermal",
+      "top_horizon": "Top F6 (Top (Bunter Sst Fm)",
+      "base_horizon": "Top F7 (Top (Bunter Sh Fm)",
+      "porosity": 0.15,
+      "ntg": 0.55,
+      "permeability_md": 90.0,
+      "ln_permeability_sd": 1.0,
+      "thickness_relative_sd": 0.25,
+      "valid_depth_min_m": 800,
+      "valid_depth_max_m": 3000,
+      "minimum_thickness_m": 20,
+      "status": "candidate"
+    }
+  ]
+}
+

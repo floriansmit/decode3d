@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.env
+
+# Local/deployment packaging and temporary artifacts.
+artifacts/
+decode-site-v*.tar.gz
+.sites-web-git/
+
+# Source cultural workbooks may carry separate redistribution terms.
+data/cultural/raw/
+
+# Source geological deliveries are intentionally kept outside version control.
+2026 Model Decode Area/
+all_wells/
+
+# Generated scientific products; retain only manifests and web previews.
+data/derived/*.nc
+data/derived/*.tif
+data/derived/*.zarr/
+
+# Frontend build/runtime output.
+apps/web/node_modules/
+apps/web/.next/
+apps/web/dist/
+apps/web/.sites-runtime/
+apps/web/.wrangler/
+

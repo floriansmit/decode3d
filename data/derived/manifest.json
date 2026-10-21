@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "reservoir_id": "chalk_shallow",
+      "path": "data\\derived\\chalk_shallow__pythermogis_input.nc",
+      "assessment_type": "ates",
+      "status": "screening_only"
+    },
+    {
+      "reservoir_id": "frederikshavn",
+      "path": "data\\derived\\frederikshavn__pythermogis_input.nc",
+      "assessment_type": "deep_geothermal",
+      "status": "candidate"
+    },
+    {
+      "reservoir_id": "haldager_sand",
+      "path": "data\\derived\\haldager_sand__pythermogis_input.nc",
+      "assessment_type": "deep_geothermal",
+      "status": "candidate"
+    },
+    {
+      "reservoir_id": "gassum",
+      "path": "data\\derived\\gassum__pythermogis_input.nc",
+      "assessment_type": "deep_geothermal",
+      "status": "primary"
+    },
+    {
+      "reservoir_id": "skagerrak",
+      "path": "data\\derived\\skagerrak__pythermogis_input.nc",
+      "assessment_type": "deep_geothermal",
+      "status": "candidate"
+    },
+    {
+      "reservoir_id": "bunter_sandstone",
+      "path": "data\\derived\\bunter_sandstone__pythermogis_input.nc",
+      "assessment_type": "deep_geothermal",
+      "status": "candidate"
+    }
+  ]
+}

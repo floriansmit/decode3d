@@ -1,0 +1,650 @@
+{
+  "source": "Supplied Petrel well tops and LAS files",
+  "method": "Formation-top intervals; median PHIE (NPHI fallback); geometric-mean PERM_GEUS; NTG as Vshale <= 0.4",
+  "wells": [
+    {
+      "name": "Farsø-1",
+      "x": 522230.86,
+      "y": 6293254.26,
+      "role": "conditioning",
+      "las_file": "all_wells\\las\\Farsø-1.las",
+      "intervals": {
+        "chalk_shallow": {
+          "top_md_m": 40.0,
+          "base_md_m": 1435.0,
+          "thickness_m": 1395.0,
+          "porosity": 0.1536,
+          "porosity_samples": 830,
+          "ntg": 0.9998,
+          "vshale_samples": 8838
+        },
+        "frederikshavn": {
+          "top_md_m": 1714.0,
+          "base_md_m": 1864.0,
+          "thickness_m": 150.0,
+          "porosity": 0.2774,
+          "porosity_samples": 1484,
+          "ntg": 0.0,
+          "vshale_samples": 1500
+        },
+        "haldager_sand": {
+          "top_md_m": 1959.0,
+          "base_md_m": 1977.0,
+          "thickness_m": 18.0,
+          "porosity": 0.2202,
+          "porosity_samples": 180,
+          "ntg": 0.85,
+          "vshale_samples": 180
+        },
+        "gassum": {
+          "top_md_m": 2743.0,
+          "base_md_m": 2941.0,
+          "thickness_m": 198.0,
+          "ntg": 0.4944,
+          "vshale_samples": 1980
+        }
+      }
+    },
+    {
+      "name": "Gassum-1",
+      "x": 561768.03,
+      "y": 6269278.81,
+      "role": "conditioning",
+      "las_file": "all_wells\\las\\Gassum-1.las",
+      "intervals": {
+        "chalk_shallow": {
+          "top_md_m": 29.6,
+          "base_md_m": 1001.9,
+          "thickness_m": 972.3,
+          "ntg": 0.9971,
+          "vshale_samples": 9723
+        },
+        "frederikshavn": {
+          "top_md_m": 1078.4,
+          "base_md_m": 1179.0,
+          "thickness_m": 100.6,
+          "porosity": 0.283,
+          "porosity_samples": 1006,
+          "permeability_md": 369.791,
+          "ln_permeability_sd": 1.624,
+          "permeability_samples": 1006,
+          "ntg": 0.659,
+          "vshale_samples": 1006
+        },
+        "gassum": {
+          "top_md_m": 1517.9,
+          "base_md_m": 1647.7,
+          "thickness_m": 129.8,
+          "porosity": 0.1302,
+          "porosity_samples": 1296,
+          "permeability_md": 22.354,
+          "ln_permeability_sd": 2.952,
+          "permeability_samples": 1293,
+          "ntg": 0.3205,
+          "vshale_samples": 1298
+        }
+      }
+    },
+    {
+      "name": "Hobro-1",
+      "x": 538946.73,
+      "y": 6274108.59,
+      "role": "conditioning",
+      "las_file": "all_wells\\las\\Hobro-1.las",
+      "intervals": {
+        "chalk_shallow": {
+          "top_md_m": 73.0,
+          "base_md_m": 1615.0,
+          "thickness_m": 1542.0,
+          "porosity": 0.1806,
+          "porosity_samples": 12972,
+          "ntg": 1.0,
+          "vshale_samples": 15418
+        },
+        "frederikshavn": {
+          "top_md_m": 1773.0,
+          "base_md_m": 1838.0,
+          "thickness_m": 65.0,
+          "porosity": 0.1333,
+          "porosity_samples": 650,
+          "ntg": 0.2108,
+          "vshale_samples": 650
+        },
+        "haldager_sand": {
+          "top_md_m": 1884.0,
+          "base_md_m": 1923.0,
+          "thickness_m": 39.0,
+          "porosity": 0.1442,
+          "porosity_samples": 390,
+          "ntg": 0.4205,
+          "vshale_samples": 390
+        },
+        "gassum": {
+          "top_md_m": 2376.0,
+          "base_md_m": 2521.0,
+          "thickness_m": 145.0,
+          "porosity": 0.1975,
+          "porosity_samples": 1450,
+          "ntg": 0.429,
+          "vshale_samples": 1450
+        }
+      }
+    },
+    {
+      "name": "Hyllebjerg-1",
+      "x": 521266.55,
+      "y": 6296956.76,
+      "role": "conditioning",
+      "las_file": "all_wells\\las\\Hyllebjerg-1.las",
+      "intervals": {
+        "chalk_shallow": {
+          "top_md_m": 26.0,
+          "base_md_m": 1398.0,
+          "thickness_m": 1372.0,
+          "porosity": 0.1396,
+          "porosity_samples": 1473,
+          "ntg": 0.9989,
+          "vshale_samples": 12478
+        },
+        "frederikshavn": {
+          "top_md_m": 1692.0,
+          "base_md_m": 1838.0,
+          "thickness_m": 146.0,
+          "porosity": 0.0043,
+          "porosity_samples": 111,
+          "ntg": 0.0,
+          "vshale_samples": 1460
+        },
+        "haldager_sand": {
+          "top_md_m": 1913.0,
+          "base_md_m": 1922.0,
+          "thickness_m": 9.0,
+          "porosity": 0.2306,
+          "porosity_samples": 90,
+          "ntg": 0.9778,
+          "vshale_samples": 90
+        },
+        "gassum": {
+          "top_md_m": 2582.0,
+          "base_md_m": 2751.0,
+          "thickness_m": 169.0,
+          "porosity": 0.1295,
+          "porosity_samples": 1671,
+          "ntg": 0.5503,
+          "vshale_samples": 1690
+        }
+      }
+    },
+    {
+      "name": "Kvols-1",
+      "x": 518385.87,
+      "y": 6265280.02,
+      "role": "conditioning",
+      "las_file": "all_wells\\las\\Kvols-1.las",
+      "intervals": {
+        "chalk_shallow": {
+          "top_md_m": 253.0,
+          "base_md_m": 1741.0,
+          "thickness_m": 1488.0,
+          "porosity": 0.1147,
+          "porosity_samples": 1510,
+          "ntg": 1.0,
+          "vshale_samples": 14878
+        },
+        "frederikshavn": {
+          "top_md_m": 1875.0,
+          "base_md_m": 1931.0,
+          "thickness_m": 56.0,
+          "porosity": 0.0425,
+          "porosity_samples": 494,
+          "permeability_md": 0.381,
+          "ln_permeability_sd": 2.641,
+          "permeability_samples": 406,
+          "ntg": 0.0,
+          "vshale_samples": 560
+        },
+        "haldager_sand": {
+          "top_md_m": 1959.0,
+          "base_md_m": 1974.0,
+          "thickness_m": 15.0,
+          "porosity": 0.1792,
+          "porosity_samples": 141,
+          "permeability_md": 66.91,
+          "ln_permeability_sd": 2.435,
+          "permeability_samples": 140,
+          "ntg": 0.76,
+          "vshale_samples": 150
+        },
+        "gassum": {
+          "top_md_m": 2424.0,
+          "base_md_m": 2533.0,
+          "thickness_m": 109.0,
+          "porosity": 0.0898,
+          "porosity_samples": 993,
+          "permeability_md": 5.958,
+          "ln_permeability_sd": 3.057,
+          "permeability_samples": 913,
+          "ntg": 0.2982,
+          "vshale_samples": 1090
+        }
+      }
+    },
+    {
+      "name": "Voldum-1",
+      "x": 578227.65,
+      "y": 6249671.9,
+      "role": "conditioning",
+      "las_file": "all_wells\\las\\Voldum-1.las",
+      "intervals": {
+        "chalk_shallow": {
+          "top_md_m": 27.0,
+          "base_md_m": 1247.0,
+          "thickness_m": 1220.0,
+          "ntg": 1.0,
+          "vshale_samples": 12200
+        },
+        "frederikshavn": {
+          "top_md_m": 1313.0,
+          "base_md_m": 1379.0,
+          "thickness_m": 66.0,
+          "porosity": 0.1874,
+          "porosity_samples": 642,
+          "permeability_md": 63.317,
+          "ln_permeability_sd": 2.104,
+          "permeability_samples": 639,
+          "ntg": 0.9485,
+          "vshale_samples": 660
+        },
+        "haldager_sand": {
+          "top_md_m": 1393.0,
+          "base_md_m": 1423.0,
+          "thickness_m": 30.0,
+          "porosity": 0.1124,
+          "porosity_samples": 300,
+          "permeability_md": 8.267,
+          "ln_permeability_sd": 3.52,
+          "permeability_samples": 289,
+          "ntg": 0.61,
+          "vshale_samples": 300
+        },
+        "gassum": {
+          "top_md_m": 1757.0,
+          "base_md_m": 1885.0,
+          "thickness_m": 128.0,
+          "porosity": 0.0616,
+          "porosity_samples": 660,
+          "permeability_md": 1.242,
+          "ln_permeability_sd": 3.162,
+          "permeability_samples": 547,
+          "ntg": 0.2805,
+          "vshale_samples": 1280
+        }
+      }
+    },
+    {
+      "name": "Års-1",
+      "x": 531115.24,
+      "y": 6294872.46,
+      "role": "tops_only",
+      "las_file": "all_wells\\las\\Års-1.las",
+      "intervals": {
+        "chalk_shallow": {
+          "top_md_m": 128.0,
+          "base_md_m": 1793.0,
+          "thickness_m": 1665.0
+        },
+        "frederikshavn": {
+          "top_md_m": 2194.0,
+          "base_md_m": 2374.0,
+          "thickness_m": 180.0
+        },
+        "haldager_sand": {
+          "top_md_m": 2465.0,
+          "base_md_m": 2500.0,
+          "thickness_m": 35.0
+        },
+        "gassum": {
+          "top_md_m": 3205.0,
+          "base_md_m": 3385.0,
+          "thickness_m": 180.0
+        }
+      }
+    }
+  ],
+  "reservoir_samples": {
+    "chalk_shallow": [
+      {
+        "well": "Farsø-1",
+        "x": 522230.86,
+        "y": 6293254.26,
+        "top_md_m": 40.0,
+        "base_md_m": 1435.0,
+        "thickness_m": 1395.0,
+        "porosity": 0.1536,
+        "porosity_samples": 830,
+        "ntg": 0.9998,
+        "vshale_samples": 8838
+      },
+      {
+        "well": "Gassum-1",
+        "x": 561768.03,
+        "y": 6269278.81,
+        "top_md_m": 29.6,
+        "base_md_m": 1001.9,
+        "thickness_m": 972.3,
+        "ntg": 0.9971,
+        "vshale_samples": 9723
+      },
+      {
+        "well": "Hobro-1",
+        "x": 538946.73,
+        "y": 6274108.59,
+        "top_md_m": 73.0,
+        "base_md_m": 1615.0,
+        "thickness_m": 1542.0,
+        "porosity": 0.1806,
+        "porosity_samples": 12972,
+        "ntg": 1.0,
+        "vshale_samples": 15418
+      },
+      {
+        "well": "Hyllebjerg-1",
+        "x": 521266.55,
+        "y": 6296956.76,
+        "top_md_m": 26.0,
+        "base_md_m": 1398.0,
+        "thickness_m": 1372.0,
+        "porosity": 0.1396,
+        "porosity_samples": 1473,
+        "ntg": 0.9989,
+        "vshale_samples": 12478
+      },
+      {
+        "well": "Kvols-1",
+        "x": 518385.87,
+        "y": 6265280.02,
+        "top_md_m": 253.0,
+        "base_md_m": 1741.0,
+        "thickness_m": 1488.0,
+        "porosity": 0.1147,
+        "porosity_samples": 1510,
+        "ntg": 1.0,
+        "vshale_samples": 14878
+      },
+      {
+        "well": "Voldum-1",
+        "x": 578227.65,
+        "y": 6249671.9,
+        "top_md_m": 27.0,
+        "base_md_m": 1247.0,
+        "thickness_m": 1220.0,
+        "ntg": 1.0,
+        "vshale_samples": 12200
+      },
+      {
+        "well": "Års-1",
+        "x": 531115.24,
+        "y": 6294872.46,
+        "top_md_m": 128.0,
+        "base_md_m": 1793.0,
+        "thickness_m": 1665.0
+      }
+    ],
+    "frederikshavn": [
+      {
+        "well": "Farsø-1",
+        "x": 522230.86,
+        "y": 6293254.26,
+        "top_md_m": 1714.0,
+        "base_md_m": 1864.0,
+        "thickness_m": 150.0,
+        "porosity": 0.2774,
+        "porosity_samples": 1484,
+        "ntg": 0.0,
+        "vshale_samples": 1500
+      },
+      {
+        "well": "Gassum-1",
+        "x": 561768.03,
+        "y": 6269278.81,
+        "top_md_m": 1078.4,
+        "base_md_m": 1179.0,
+        "thickness_m": 100.6,
+        "porosity": 0.283,
+        "porosity_samples": 1006,
+        "permeability_md": 369.791,
+        "ln_permeability_sd": 1.624,
+        "permeability_samples": 1006,
+        "ntg": 0.659,
+        "vshale_samples": 1006
+      },
+      {
+        "well": "Hobro-1",
+        "x": 538946.73,
+        "y": 6274108.59,
+        "top_md_m": 1773.0,
+        "base_md_m": 1838.0,
+        "thickness_m": 65.0,
+        "porosity": 0.1333,
+        "porosity_samples": 650,
+        "ntg": 0.2108,
+        "vshale_samples": 650
+      },
+      {
+        "well": "Hyllebjerg-1",
+        "x": 521266.55,
+        "y": 6296956.76,
+        "top_md_m": 1692.0,
+        "base_md_m": 1838.0,
+        "thickness_m": 146.0,
+        "porosity": 0.0043,
+        "porosity_samples": 111,
+        "ntg": 0.0,
+        "vshale_samples": 1460
+      },
+      {
+        "well": "Kvols-1",
+        "x": 518385.87,
+        "y": 6265280.02,
+        "top_md_m": 1875.0,
+        "base_md_m": 1931.0,
+        "thickness_m": 56.0,
+        "porosity": 0.0425,
+        "porosity_samples": 494,
+        "permeability_md": 0.381,
+        "ln_permeability_sd": 2.641,
+        "permeability_samples": 406,
+        "ntg": 0.0,
+        "vshale_samples": 560
+      },
+      {
+        "well": "Voldum-1",
+        "x": 578227.65,
+        "y": 6249671.9,
+        "top_md_m": 1313.0,
+        "base_md_m": 1379.0,
+        "thickness_m": 66.0,
+        "porosity": 0.1874,
+        "porosity_samples": 642,
+        "permeability_md": 63.317,
+        "ln_permeability_sd": 2.104,
+        "permeability_samples": 639,
+        "ntg": 0.9485,
+        "vshale_samples": 660
+      },
+      {
+        "well": "Års-1",
+        "x": 531115.24,
+        "y": 6294872.46,
+        "top_md_m": 2194.0,
+        "base_md_m": 2374.0,
+        "thickness_m": 180.0
+      }
+    ],
+    "haldager_sand": [
+      {
+        "well": "Farsø-1",
+        "x": 522230.86,
+        "y": 6293254.26,
+        "top_md_m": 1959.0,
+        "base_md_m": 1977.0,
+        "thickness_m": 18.0,
+        "porosity": 0.2202,
+        "porosity_samples": 180,
+        "ntg": 0.85,
+        "vshale_samples": 180
+      },
+      {
+        "well": "Hobro-1",
+        "x": 538946.73,
+        "y": 6274108.59,
+        "top_md_m": 1884.0,
+        "base_md_m": 1923.0,
+        "thickness_m": 39.0,
+        "porosity": 0.1442,
+        "porosity_samples": 390,
+        "ntg": 0.4205,
+        "vshale_samples": 390
+      },
+      {
+        "well": "Hyllebjerg-1",
+        "x": 521266.55,
+        "y": 6296956.76,
+        "top_md_m": 1913.0,
+        "base_md_m": 1922.0,
+        "thickness_m": 9.0,
+        "porosity": 0.2306,
+        "porosity_samples": 90,
+        "ntg": 0.9778,
+        "vshale_samples": 90
+      },
+      {
+        "well": "Kvols-1",
+        "x": 518385.87,
+        "y": 6265280.02,
+        "top_md_m": 1959.0,
+        "base_md_m": 1974.0,
+        "thickness_m": 15.0,
+        "porosity": 0.1792,
+        "porosity_samples": 141,
+        "permeability_md": 66.91,
+        "ln_permeability_sd": 2.435,
+        "permeability_samples": 140,
+        "ntg": 0.76,
+        "vshale_samples": 150
+      },
+      {
+        "well": "Voldum-1",
+        "x": 578227.65,
+        "y": 6249671.9,
+        "top_md_m": 1393.0,
+        "base_md_m": 1423.0,
+        "thickness_m": 30.0,
+        "porosity": 0.1124,
+        "porosity_samples": 300,
+        "permeability_md": 8.267,
+        "ln_permeability_sd": 3.52,
+        "permeability_samples": 289,
+        "ntg": 0.61,
+        "vshale_samples": 300
+      },
+      {
+        "well": "Års-1",
+        "x": 531115.24,
+        "y": 6294872.46,
+        "top_md_m": 2465.0,
+        "base_md_m": 2500.0,
+        "thickness_m": 35.0
+      }
+    ],
+    "gassum": [
+      {
+        "well": "Farsø-1",
+        "x": 522230.86,
+        "y": 6293254.26,
+        "top_md_m": 2743.0,
+        "base_md_m": 2941.0,
+        "thickness_m": 198.0,
+        "ntg": 0.4944,
+        "vshale_samples": 1980
+      },
+      {
+        "well": "Gassum-1",
+        "x": 561768.03,
+        "y": 6269278.81,
+        "top_md_m": 1517.9,
+        "base_md_m": 1647.7,
+        "thickness_m": 129.8,
+        "porosity": 0.1302,
+        "porosity_samples": 1296,
+        "permeability_md": 22.354,
+        "ln_permeability_sd": 2.952,
+        "permeability_samples": 1293,
+        "ntg": 0.3205,
+        "vshale_samples": 1298
+      },
+      {
+        "well": "Hobro-1",
+        "x": 538946.73,
+        "y": 6274108.59,
+        "top_md_m": 2376.0,
+        "base_md_m": 2521.0,
+        "thickness_m": 145.0,
+        "porosity": 0.1975,
+        "porosity_samples": 1450,
+        "ntg": 0.429,
+        "vshale_samples": 1450
+      },
+      {
+        "well": "Hyllebjerg-1",
+        "x": 521266.55,
+        "y": 6296956.76,
+        "top_md_m": 2582.0,
+        "base_md_m": 2751.0,
+        "thickness_m": 169.0,
+        "porosity": 0.1295,
+        "porosity_samples": 1671,
+        "ntg": 0.5503,
+        "vshale_samples": 1690
+      },
+      {
+        "well": "Kvols-1",
+        "x": 518385.87,
+        "y": 6265280.02,
+        "top_md_m": 2424.0,
+        "base_md_m": 2533.0,
+        "thickness_m": 109.0,
+        "porosity": 0.0898,
+        "porosity_samples": 993,
+        "permeability_md": 5.958,
+        "ln_permeability_sd": 3.057,
+        "permeability_samples": 913,
+        "ntg": 0.2982,
+        "vshale_samples": 1090
+      },
+      {
+        "well": "Voldum-1",
+        "x": 578227.65,
+        "y": 6249671.9,
+        "top_md_m": 1757.0,
+        "base_md_m": 1885.0,
+        "thickness_m": 128.0,
+        "porosity": 0.0616,
+        "porosity_samples": 660,
+        "permeability_md": 1.242,
+        "ln_permeability_sd": 3.162,
+        "permeability_samples": 547,
+        "ntg": 0.2805,
+        "vshale_samples": 1280
+      },
+      {
+        "well": "Års-1",
+        "x": 531115.24,
+        "y": 6294872.46,
+        "top_md_m": 3205.0,
+        "base_md_m": 3385.0,
+        "thickness_m": 180.0
+      }
+    ]
+  }
+}
