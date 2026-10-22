@@ -17,6 +17,31 @@ Hosted demonstration: <https://decode-geothermal-explorer.floriansmit88.chatgpt.
 - Local FastAPI endpoint for the real PyThermoGIS 3 Java-backed calculation engine
 - DoubletCalc1D workspace initialised from PyThermoGIS results
 
+## Demo screenshots
+
+The hosted demo combines the regional reservoir grids with an OpenStreetMap basemap, selectable model cells, study wells, and an address search.
+
+![Interactive 2D geology map showing the Gassum temperature grid and study wells](docs/images/demo-geology-map.png)
+
+The 3D viewer displays the geological architecture, coloured reservoir-property surfaces, formation visibility controls, and well trajectories.
+
+![Interactive 3D geological architecture and temperature surface](docs/images/demo-geology-3d.png)
+
+PyThermoGIS outputs can be inspected over the same 2D or 3D geometry, including fixed P10–P90 colour ranges and cell-level doublet results.
+
+![PyThermoGIS P50 geothermal-power results in the 3D viewer](docs/images/demo-pythermogis-3d.png)
+
+## Included demo data
+
+The browser-ready demonstration dataset is committed under `apps/web/public/data` and totals approximately 10.2 MiB:
+
+- `model-preview.json` — downsampled 2D geological and reservoir-property grids
+- `architecture-3d.json` — 3D horizons, architecture, and demonstration well trajectories
+- `pythermogis-preview.json` — precomputed stochastic PyThermoGIS outputs
+- `cultural-data.json` — demonstration heat-market and cultural overlays
+
+These files are sufficient for the hosted Demo experience. The original geological deliveries and nationwide well archive are not required by the browser and remain excluded from Git.
+
 ## Repository layout
 
 ```text
