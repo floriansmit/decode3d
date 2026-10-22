@@ -21,6 +21,17 @@ api = ["fastapi>=0.116", "uvicorn>=0.35"]
 thermogis = ["pythermogis>=3.0.3,<4"]
 test = ["pytest>=8.3"]
 
+[tool.uv]
+system-certs = true
+
+[tool.uv.sources]
+pythermogis = { index = "tno-pythermogis" }
+
+[[tool.uv.index]]
+name = "tno-pythermogis"
+url = "https://ci.tno.nl/gitlab/api/v4/projects/18271/packages/pypi/simple"
+explicit = true
+
 [project.scripts]
 decode-build-model = "decode3d.processing.first_pass:main"
 decode-run-pythermogis = "decode3d.calculations.pythermogis_adapter:main"

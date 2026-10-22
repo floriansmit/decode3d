@@ -2,7 +2,7 @@
 
 DECODE turns regional geological-model inputs into reservoir maps, an interactive 2D/3D browser, probabilistic geothermal screening outputs, and an adjustable doublet assessment.
 
-The repository contains the processing code, FastAPI service, website, configuration, tests, and lightweight demonstration assets. Original geological deliveries, well files, generated scientific rasters, and the PyThermoGIS distribution itself are intentionally not included; the setup script installs PyThermoGIS directly from TNO's official package index.
+The repository contains the processing code, FastAPI service, website, configuration, tests, and lightweight demonstration assets. Original geological deliveries, well files, generated scientific rasters, and the PyThermoGIS distribution itself are intentionally not included; `uv` installs PyThermoGIS directly from TNO's official package index.
 
 Hosted demonstration: <https://decode-geothermal-explorer.floriansmit88.chatgpt.site/>
 
@@ -65,7 +65,7 @@ run-local.cmd           Windows launcher for website + API
 - Internet access during setup
 - At least 500 MiB of free space for PyThermoGIS and its managed Java 17 runtime, in addition to the normal Python and Node dependencies
 
-PyThermoGIS is published on TNO's GitLab package index rather than public PyPI. Its package is about 150 MiB and it automatically provisions a Java 17 runtime of about 350 MiB. Review and comply with TNO's applicable software terms.
+PyThermoGIS is published on TNO's GitLab package index rather than public PyPI. Its package is about 150 MiB and it automatically provisions a Java 17 runtime of about 350 MiB. Review and comply with TNO's applicable software terms. The setup uses `uv` for the complete Python environment and bootstraps `uv` automatically if it is not already installed.
 
 ### Installation
 
@@ -75,7 +75,7 @@ cd decode3d
 .\setup-local.cmd
 ```
 
-The setup creates an isolated `.venv`, installs DECODE and PyThermoGIS 3 from the official TNO index, prepares PyThermoGIS's managed Java 17 runtime, and installs the website dependencies. The first setup can take several minutes because the Python package and JVM together require roughly 500 MiB. The `.cmd` launcher applies `ExecutionPolicy Bypass` only to its child process and does not modify the machine-wide PowerShell policy.
+The setup uses the committed `uv.lock` to create and synchronise `.venv`, installs DECODE and PyThermoGIS 3 from their configured indexes, prepares PyThermoGIS's managed Java 17 runtime, and installs the website dependencies. The first setup can take several minutes because the Python package and JVM together require roughly 500 MiB. The `.cmd` launcher applies `ExecutionPolicy Bypass` only to its child process and does not modify the machine-wide PowerShell policy.
 
 ### Start the application
 
@@ -96,10 +96,8 @@ Keep the launcher window open while using the application. Press `Ctrl+C` to sto
 The following is useful on macOS/Linux or when managing the processes independently:
 
 ```bash
-python -m venv .venv
-# Windows: .venv/Scripts/python -m pip install --upgrade -r requirements.txt
-# macOS/Linux: .venv/bin/python -m pip install --upgrade -r requirements.txt
-# Optional development tests: use the same interpreter with `-m pip install -e ".[test]"`
+uv sync --extra api --extra thermogis --extra test
+uv run python -c "from pythermogis.jvm import start_jvm; start_jvm()"
 cd apps/web
 npm install
 ```
@@ -107,7 +105,7 @@ npm install
 Start the API from the repository root:
 
 ```bash
-.venv/bin/python -m uvicorn apps.api.main:app --host 127.0.0.1 --port 8000
+uv run uvicorn apps.api.main:app --host 127.0.0.1 --port 8000
 ```
 
 Start the website in another terminal:
@@ -122,8 +120,8 @@ NEXT_PUBLIC_PYTHERMOGIS_API=http://127.0.0.1:8000 npm run dev
 The source deliveries expected by the processing workflow are deliberately ignored by Git. Place authorised local data in the documented folders, then run:
 
 ```powershell
-.\.venv\Scripts\python.exe -m decode3d.processing.first_pass
-.\.venv\Scripts\python.exe -m decode3d.calculations.pythermogis_adapter --dry-run
+uv run python -m decode3d.processing.first_pass
+uv run python -m decode3d.calculations.pythermogis_adapter --dry-run
 ```
 
 Generated NetCDF and GeoTIFF products are written to `data/derived`. Downsampled, browser-safe demonstration products are written to `apps/web/public/data`.
@@ -133,7 +131,7 @@ See [Data inputs and provenance](docs/data-inputs.md) and the [data contract](do
 ## Validation
 
 ```powershell
-.\.venv\Scripts\python.exe -m pytest
+uv run pytest
 cd apps\web
 npm run build
 ```

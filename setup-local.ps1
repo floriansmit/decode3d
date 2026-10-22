@@ -4,16 +4,23 @@ $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $venvRoot = Join-Path $projectRoot ".venv"
 $localPython = Join-Path $venvRoot "Scripts\python.exe"
 
-if (-not (Test-Path -LiteralPath $localPython)) {
-    Write-Host "Creating project-local Python environment in .venv"
-    python -m venv $venvRoot
+$uvCommand = Get-Command uv -ErrorAction SilentlyContinue
+if ($uvCommand) {
+    $uvRunner = $uvCommand.Source
+    $uvPrefix = @()
+}
+else {
+    Write-Host "uv was not found; installing the dependency manager"
+    python -m pip install --user --upgrade "uv>=0.12.5"
+    $uvRunner = "python"
+    $uvPrefix = @("-m", "uv")
 }
 
-Write-Host "Installing DECODE and PyThermoGIS from the official TNO package index"
-& $localPython -m pip install --upgrade pip
+Write-Host "Synchronising the locked DECODE, API, test, and PyThermoGIS environment with uv"
 Push-Location $projectRoot
 try {
-    & $localPython -m pip install --upgrade -r (Join-Path $projectRoot "requirements.txt")
+    $syncArguments = $uvPrefix + @("sync", "--extra", "api", "--extra", "thermogis", "--extra", "test")
+    & $uvRunner @syncArguments
 }
 finally {
     Pop-Location
