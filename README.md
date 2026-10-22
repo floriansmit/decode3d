@@ -2,7 +2,7 @@
 
 DECODE turns regional geological-model inputs into reservoir maps, an interactive 2D/3D browser, probabilistic geothermal screening outputs, and an adjustable doublet assessment.
 
-The repository contains the processing code, FastAPI service, website, configuration, tests, and lightweight demonstration assets. Original geological deliveries, well files, generated scientific rasters, and the licensed PyThermoGIS distribution are intentionally not included.
+The repository contains the processing code, FastAPI service, website, configuration, tests, and lightweight demonstration assets. Original geological deliveries, well files, generated scientific rasters, and the PyThermoGIS distribution itself are intentionally not included; the setup script installs PyThermoGIS directly from TNO's official package index.
 
 Hosted demonstration: <https://decode-geothermal-explorer.floriansmit88.chatgpt.site/>
 
@@ -62,10 +62,10 @@ run-local.cmd           Windows launcher for website + API
 - Windows 10 or 11
 - Python 3.11–3.13 available as `python`
 - Node.js 22 or newer with `npm`
-- A Java runtime compatible with the installed PyThermoGIS distribution
-- An authorised installation of PyThermoGIS 3 in the base Python environment
+- Internet access during setup
+- At least 500 MiB of free space for PyThermoGIS and its managed Java 17 runtime, in addition to the normal Python and Node dependencies
 
-PyThermoGIS 3 is licensed software and is not fetched from public PyPI by this repository. Obtain and install it through the authorised distribution channel before running the live calculation engine.
+PyThermoGIS is published on TNO's GitLab package index rather than public PyPI. Its package is about 150 MiB and it automatically provisions a Java 17 runtime of about 350 MiB. Review and comply with TNO's applicable software terms.
 
 ### Installation
 
@@ -75,7 +75,7 @@ cd decode3d
 .\setup-local.cmd
 ```
 
-The setup creates `.venv`, installs the DECODE package and API dependencies, verifies access to PyThermoGIS 3, and installs the website dependencies. The `.cmd` launcher applies `ExecutionPolicy Bypass` only to its child process and does not modify the machine-wide PowerShell policy.
+The setup creates an isolated `.venv`, installs DECODE and PyThermoGIS 3 from the official TNO index, prepares PyThermoGIS's managed Java 17 runtime, and installs the website dependencies. The first setup can take several minutes because the Python package and JVM together require roughly 500 MiB. The `.cmd` launcher applies `ExecutionPolicy Bypass` only to its child process and does not modify the machine-wide PowerShell policy.
 
 ### Start the application
 
@@ -96,9 +96,10 @@ Keep the launcher window open while using the application. Press `Ctrl+C` to sto
 The following is useful on macOS/Linux or when managing the processes independently:
 
 ```bash
-python -m venv --system-site-packages .venv
-# Windows: .venv/Scripts/python -m pip install -e ".[api,test]"
-# macOS/Linux: .venv/bin/python -m pip install -e ".[api,test]"
+python -m venv .venv
+# Windows: .venv/Scripts/python -m pip install --upgrade -r requirements.txt
+# macOS/Linux: .venv/bin/python -m pip install --upgrade -r requirements.txt
+# Optional development tests: use the same interpreter with `-m pip install -e ".[test]"`
 cd apps/web
 npm install
 ```

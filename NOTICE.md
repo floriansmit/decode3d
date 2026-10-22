@@ -1,6 +1,6 @@
 # Notices and data rights
 
-This repository contains DECODE application and processing source code. It does not redistribute the licensed PyThermoGIS 3 package, ThermoGIS Java components, original geological deliveries, or well-data collections.
+This repository contains DECODE application and processing source code. It does not redistribute the PyThermoGIS 3 package, ThermoGIS Java components, original geological deliveries, or well-data collections. The setup process downloads PyThermoGIS directly from TNO's official package index and lets that package provision its managed Java runtime.
 
 Users are responsible for obtaining authorised copies of third-party software and data and for complying with their licence, confidentiality, attribution, and redistribution terms.
 

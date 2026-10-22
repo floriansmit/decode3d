@@ -59,6 +59,6 @@ The public Site can serve all static demonstration functionality. It cannot run 
 
 - Raw geological and well deliveries stay outside version control.
 - Browser uploads are not persisted by the current frontend.
-- The PyThermoGIS package is never copied into the repository.
+- The PyThermoGIS package is never copied into the repository; local setup installs it directly from TNO's official package index.
 - Production deployments should configure allowed CORS origins rather than permitting arbitrary origins.
 - Large or confidential model uploads should use authenticated object storage and expiring URLs in a future multi-user deployment.

@@ -6,15 +6,21 @@ $localPython = Join-Path $venvRoot "Scripts\python.exe"
 
 if (-not (Test-Path -LiteralPath $localPython)) {
     Write-Host "Creating project-local Python environment in .venv"
-    # PyThermoGIS 3 is a licensed package installed outside PyPI on this workstation.
-    # Expose that verified installation without copying or redistributing its files.
-    python -m venv --system-site-packages $venvRoot
+    python -m venv $venvRoot
 }
 
-Write-Host "Installing the DECODE API and PyThermoGIS engine"
+Write-Host "Installing DECODE and PyThermoGIS from the official TNO package index"
 & $localPython -m pip install --upgrade pip
-& $localPython -m pip install -e "${projectRoot}[api]"
-& $localPython -c "from importlib.metadata import version; import pythermogis; assert version('pythermogis').startswith('3.'), 'PyThermoGIS 3 is required'"
+Push-Location $projectRoot
+try {
+    & $localPython -m pip install --upgrade -r (Join-Path $projectRoot "requirements.txt")
+}
+finally {
+    Pop-Location
+}
+
+Write-Host "Preparing the bundled PyThermoGIS Java 17 runtime (first setup can take a few minutes)"
+& $localPython -c "from importlib.metadata import version; from pythermogis.jvm import start_jvm; v = version('pythermogis'); assert v.startswith('3.'), 'PyThermoGIS 3 is required'; start_jvm(); print(f'PyThermoGIS {v} and Java 17 are ready')"
 
 Write-Host "Installing website dependencies"
 Push-Location (Join-Path $projectRoot "apps\web")

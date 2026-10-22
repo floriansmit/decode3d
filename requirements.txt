@@ -1,0 +1,4 @@
+# TNO publishes PyThermoGIS on its GitLab Python package index rather than PyPI.
+--index-url https://ci.tno.nl/gitlab/api/v4/projects/18271/packages/pypi/simple
+
+-e .[api,thermogis]

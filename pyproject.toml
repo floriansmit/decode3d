@@ -18,7 +18,7 @@ dependencies = [
 
 [project.optional-dependencies]
 api = ["fastapi>=0.116", "uvicorn>=0.35"]
-thermogis = ["pythermogis>=3.0", "jpype1>=1.6", "pygridsio>=0.1"]
+thermogis = ["pythermogis>=3.0.3,<4"]
 test = ["pytest>=8.3"]
 
 [project.scripts]
